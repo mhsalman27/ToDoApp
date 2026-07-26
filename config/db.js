@@ -8,8 +8,8 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const connectDb = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGO_URL_LOCAL);
-        console.log(`connect successfully on ${process.env.MONGO_URL_LOCAL}`);
+        const conn = await mongoose.connect(process.env.MONGO_URL);
+        console.log(`ConnectDb SuccessFully : `);
         }
         catch (error) {
         console.log(`Error : ${error.message}`);
