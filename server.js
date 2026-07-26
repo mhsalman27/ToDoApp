@@ -2,10 +2,15 @@ const express = require('express'); // here we import the express for apis
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const connectDb = require('./config/db');
 
 
 // config
 dotenv.config();
+
+// database connect 
+connectDb();
+
 
 //rest objects
 const app = express();
