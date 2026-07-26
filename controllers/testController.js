@@ -4,7 +4,7 @@ const testingController = (req , res )=>{
 }
 
 const homeController = (req ,res)=>{
-    res.send("<h2>Salman Is very HPY today :</h2>")
+    res.send("<h2> Is very HPY today :</h2>")
 }
 
 

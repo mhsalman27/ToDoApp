@@ -18,7 +18,8 @@ app.use(morgan("dev"));
 
 
 // routes//
-app.use('/app',require('./routes/testRoute'));
+app.use('/', require('./routes/testRoute'));
+
 // app.get('/test', (req , res)=>{
 //     res.status(200).send("<h1>Welcome to Node Server</h1>");
 // } );
