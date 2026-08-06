@@ -24,7 +24,6 @@ const registerController = async (req , res )=>{
     }
 
     // save user data in database
-
     const userData = new userModel({userName , email , password});
     await userData.save();
 
