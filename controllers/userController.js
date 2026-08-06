@@ -70,7 +70,7 @@ const loginController = async (req , res)=>{
         if(!isMatch){
             res.status(500).send({
                 success : false,
-                message : `invalid crenditials`
+                message : `Invalid crenditials`
             })
         }
         res.status(200).send({
