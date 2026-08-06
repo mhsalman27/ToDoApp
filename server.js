@@ -23,8 +23,8 @@ app.use(morgan("dev")); // here explanation of morgan is that it is used to log 
 
 
 // routes//
-app.use('/app/v1/user',require('./routes/userRoute'));
-app.use('/app/v1/test', require('./routes/testRoute'));
+app.use('/user',require('./routes/userRoute'));
+// app.use('/app/v1/test', require('./routes/testRoute'));
 
 // app.get('/test', (req , res)=>{
 //     res.status(200).send("<h1>Welcome to Node Server</h1>");
