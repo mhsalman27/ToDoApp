@@ -1,6 +1,6 @@
 const userModel = require("../models/userModel");
 const bcrypt = require('bcrypt');
-
+const JWT = require('jsonwebtoken');
 
 // Register Controller
 const registerController = async (req , res )=>{
@@ -66,16 +66,26 @@ const loginController = async (req , res)=>{
                 message : `Invalid username or password`,
             })
         }
+        
         const isMatch = await bcrypt.compare(password,user.password);
+
         if(!isMatch){
             res.status(500).send({
                 success : false,
                 message : `Invalid crenditials`
             })
         }
+        // token generate
+
+        const token = await JWT.sign({id : user._id},process.env.JWT_SECERET,{
+            expiresIn : "1d"
+        })
+
+
         res.status(200).send({
             success : true ,
             message : `User Find  SuccessFully`,
+            token,
             user : {
                 id : user._id,
                 userName : user.userName,
