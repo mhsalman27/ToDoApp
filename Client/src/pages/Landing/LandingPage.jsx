@@ -7,17 +7,17 @@ const LandingPage = () => {
       <div className="flex justify-between  w-full h-screen p-8">
         <div className=" mt-[8%] p-5  w-1/2">
           <div className="">
-            <h1 className="text-5xl   font-sans ">
-              Every Great Day Starts with a <br />
-              <span className="mt-2 text-olive-500 pt-2 ">Plan ..!</span>
+            <h1 className="text-5xl leading-17 font-sans ">
+              Every Great Day Starts <br />
+              <span className=" text-olive-400 pt-2 ">with a Plan ..!</span>
             </h1>
-            <p className="mt-10 text-lg leading-8 max-w-2xl font-normal">
+            <p className="mt-10 text-lg leading-8 max-w-2xl font-normal text-slate-600 text-wrap">
               Organize your tasks, track your progress, and stay in control of
               your day. A simple workspace designed to help you focus on what
               truly matters.
             </p>
           </div>
-          <div className="mt-10  flex gap-8 items-center">
+          <div className="mt-[12%]  flex gap-8 items-center">
             <Link
               to="/register"
               className="px-5 py-3 bg-black text-white rounded-xl text-center w-[30%]"
@@ -32,7 +32,9 @@ const LandingPage = () => {
             </Link>
           </div>
         </div>
-        <div>Div2</div>
+        <div>
+          <img src="./landing.png" alt="#" className="rounded-2xl mt-[10%]" />
+        </div>
       </div>
     </div>
   );
